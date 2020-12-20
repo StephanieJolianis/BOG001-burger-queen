@@ -1,32 +1,32 @@
-@import 'variables';
+// @import 'variables';
 
-/*--General styles*/
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    font-size: 16px;
-    width: 100vw;
-    height: 100vh;
-}
+// /*--General styles*/
+// body {
+//     font-family: 'Montserrat', sans-serif;
+//     margin: 0;
+//     font-size: 16px;
+//     width: 100vw;
+//     height: 100vh;
+// }
 
-#root {
-    width: 100%;
-    height: 97%;
-    }
+// #root {
+//     width: 100%;
+//     height: 97%;
+//     }
 
-.App{
-    width: 100%;
-    height: 100%;
-}
-
-
+// .App{
+//     width: 100%;
+//     height: 100%;
+// }
 
 
-/*--Component styles --*/
-    @import "../components/styles/login.scss";
-    @import "../components/styles/footer.scss";
-    @import "../components/styles/navBar.scss";
-    @import "../components/styles/pageWaiter";
-    @import "../components/styles/layout.scss";
+
+
+// /*--Component styles --*/
+//     @import "../components/styles/login.scss";
+//     @import "../components/styles/footer.scss";
+//     @import "../components/styles/navBar.scss";
+//     @import "../components/styles/pageWaiter";
+//     @import "../components/styles/layout.scss";
 
 
