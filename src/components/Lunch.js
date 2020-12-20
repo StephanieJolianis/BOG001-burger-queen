@@ -4,7 +4,7 @@ const Lunch = (props) =>{
 
     const itemProductLunch = (id)=>{
         const result = dataMenu.lunch.filter(item => item.id == id);
-            props.statusOrder(result);
+            props.statusProduct(result);
             props.showModal(true);
         }
 
@@ -19,7 +19,7 @@ const Lunch = (props) =>{
 
         const itemProductDrinks = (id)=>{
             const result = dataMenu.drinks.filter(item => item.id == id);
-                props.statusOrder(result);
+                props.statusProduct(result);
                 props.showModal(true);
             }
         
