@@ -1,4 +1,5 @@
 import data from "../data/dataTables.json";
+// import { Redirect } from "react-router-dom";
 //-----------------------------------------
 
 
@@ -16,16 +17,6 @@ return (
 const TakeOrder = (id) =>{
     window.location.href = "/order/" + id;
 }
-
-// const StyleUnavailable= (status) => {
-//         return {
-//             fontSize: "20px",
-//             color: "black",
-//             textDecoration: "none",
-//             background: status ? "#837E72" : "#FDC300",
-//             cursor:"pointer"
-//         }
-//     };
 
 
 export default Table;
