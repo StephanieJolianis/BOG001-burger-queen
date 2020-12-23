@@ -23,11 +23,11 @@ const TakingOrder = () => {
     //--------------------------------------------------------------------------->
     const updateOrder = (state, action) =>{
         const ordenLocal = {
-            id: state.id,
             date: state.date,
             itemsOrder: [...state.itemsOrder],
             client: state.client,
             table: state.table,
+            status: state.status,
             waiter: state.waiter
         };
         let itemIndex = -1;
@@ -79,6 +79,11 @@ const TakingOrder = () => {
                     ordenLocal.itemsOrder.splice(itemIndex, 1, itemCopy);
                 }
                 break;
+            case "cancel":
+                ordenLocal.date = Date.now();
+                ordenLocal.itemsOrder = [];
+                ordenLocal.client = "";
+                break;
             default:
                 break;
         }
@@ -91,6 +96,7 @@ const TakingOrder = () => {
         itemsOrder: [],
         client:"",
         table:id,
+        status:"COCINA",
         waiter:localStorage.getItem("waiter")
     }
 

@@ -4,11 +4,12 @@ import waiter from "../img/waiter.png"
 //----------------------------------------------
 
 const Nav = () => {
-
+let user = JSON.parse(localStorage.getItem("user"));
+console.log("rupaul", user);
 return (<div>
     <img className="logoNav" src ={logo} alt=""/>
-        <img className="waiterNav" src ={waiter} alt=""/>
-<p>Nombre mesero</p>
+        <img className="waiterNav" src ={user.photoURL} alt=""/>
+<p>{user.displayName}</p>
 
 <ul>
     <li><Link className="linkNav" to= "/selecttable">Select Table</Link></li>

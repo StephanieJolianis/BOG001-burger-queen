@@ -1,6 +1,10 @@
 import Client from "./Client";
+import { useHistory } from "react-router";
+import { createOrder } from "../functions-firebase.js";
+
 
 const OrderDetail = (props)=>{
+    let history = useHistory();
     let totalAux = 0;
     let detailItem = props.detailOrder.itemsOrder.map((item,index)=>{
         let itemPrice = item.custom.map((itemCustom)=>{
@@ -52,8 +56,13 @@ const OrderDetail = (props)=>{
         </div>
         {detailItem}
         <p>Total: $ {totalAux} USD</p>
-        <button>Enviar a Cocina</button>
-        <button>Cancelar</button>
+        <button onClick={()=>{
+            createOrder(props.detailOrder).then(() =>history.push('/selecttable'));
+            }} >Enviar a Cocina</button>
+        <button onClick={()=>{
+            props.modifyOrder({key:"cancel", value:""});
+            history.push('/selecttable');
+            }}>Cancelar</button>
     </div>);
 
 
