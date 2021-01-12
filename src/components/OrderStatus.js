@@ -44,14 +44,11 @@ const OrderStatus = () => {
         }
 
     let listOrders = orderList.map((ord, idx) => {
+        if (ord.status == 'COCINA')
         return(
             <li key={"order-"+idx}> { ord.id} Estado:{ord.status} 
             <button onClick={()=>setDetailOrder(ord)}>Detalle</button>
             </li>
-            // <div key={"order-"+idx}>
-            // <p> ID: { ord.id}</p> <p>Estado:{ord.status} </p>
-            
-            // </div>
             )});
 
 
@@ -60,7 +57,7 @@ const OrderStatus = () => {
                 <ul>
                 {listOrders}
                 </ul>
-                <OrderResume order={detailOrder}></OrderResume>
+                <OrderResume order={detailOrder} showStatus="COCINA" nextStatus="PROCESO"></OrderResume>
                 <button onClick={()=>window.location.href = "/selecttable" }>Regresar a Selección de mesa</button>
             </div>);
 }

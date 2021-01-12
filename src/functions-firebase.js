@@ -13,6 +13,10 @@ export const getUser= async(uid) =>{
     return await fb.database.collection("users").doc(uid).get();
 }
 
+export const udpOrderStatus = async(orderid,status) =>{
+    return await fb.database.collection("orderCollection").doc(orderid).update({status: status});
+}
+
 export const logInByPassword = async(credentials) => {
     return await fb.auth.signInWithEmailAndPassword(credentials.email, credentials.password);
 }

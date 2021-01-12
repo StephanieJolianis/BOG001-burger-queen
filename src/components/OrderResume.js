@@ -1,10 +1,11 @@
 import { useHistory } from "react-router";
 import React, { useState, useEffect } from 'react';
+import { udpOrderStatus } from "../functions-firebase.js";
 
 const OrderResume = (props) => {
     let history = useHistory();
     let totalAux = 0;
-
+    console.log(props.order);
     let detailItem = (<div><p>Selecciona una orden</p></div>);
     if(props.order.itemsOrder){
         detailItem =  props.order.itemsOrder.map((item,index)=>{
@@ -50,7 +51,9 @@ const OrderResume = (props) => {
                 </table>
                 <div>
                 <p>Total: $ {totalAux} USD</p>
-                <button onClick={()=> {history.push('/selecttable');}} >ok</button>
+                <button onClick={()=> {
+            udpOrderStatus(props.order.id, props.nextStatus).then(() =>history.push('/selecttable'));
+            }} >{props.nextStatus}</button>
                 </div></div>
             );
         });
