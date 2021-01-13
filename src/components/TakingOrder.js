@@ -107,7 +107,7 @@ const TakingOrder = () => {
         <button onClick= {()=>{setShow(true)}}>Desayuno</button>
         <button onClick= {()=>{setShow(false)}}>Almuerzo y Cena</button>
         <Modal show={open} close={setOpen} detailProduct={detailProduct} setDetailProduct={setDetailProduct} detailOrder={order} modifyOrder={setOrder} stylesBtn={ styleBtn } setStylesBtn={ setStyleBtn }/>
-        {show ? (<Breakfast statusOrder = {setDetailProduct} />) : (<Lunch statusProduct = {setDetailProduct} showModal={setOpen}/>) }
+        {show ? (<Breakfast statusProduct = {setDetailProduct} showModal={setOpen} />) : (<Lunch statusProduct = {setDetailProduct} showModal={setOpen}/>) }
         </div>
         <div className="orderInTaking">
                 <OrderDetail detailOrder={order} modifyOrder={setOrder} tableSelected={id}/>

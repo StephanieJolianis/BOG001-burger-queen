@@ -22,7 +22,7 @@ const Login = () => {
                     console.log("user rupaul", doc.data())
                     localStorage.setItem("user", JSON.stringify(doc.data()));
                 })
-                //let cosa = JSON.parse(localStorage.getItem("evaluaciones"));
+                //let cosa = JSON.parse(localStorage.getItem("user"));
                 history.push('/selecttable');
             }).catch((error)=>{
                 console.log("no valido",error);

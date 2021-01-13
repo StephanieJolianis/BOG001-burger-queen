@@ -1,15 +1,23 @@
 import Client from "./Client";
 import { useHistory } from "react-router";
 import { createOrder } from "../functions-firebase.js";
-
+import { getDataUser } from "../Utils.js";
 
 const OrderDetail = (props)=>{
     let history = useHistory();
+    let userData = getDataUser();
+    if (!userData)
+        history.push('/login');
     let totalAux = 0;
     let detailItem = props.detailOrder.itemsOrder.map((item,index)=>{
-        let itemPrice = item.custom.map((itemCustom)=>{
-            return itemCustom.price;
-        }).reduce((previus, current) =>{ return previus + current });
+        //console.log('este sera el item de la discordia?',item.custom);
+        let itemPrice = 0;
+        if(item.custom.length){
+            itemPrice = item.custom.map((itemCustom)=>{
+                return itemCustom.price;
+            }).reduce((previus, current) =>{ return previus + current });
+        }
+
         let totalItem = 0
         if(item.price){
             totalItem = itemPrice + item.price;
@@ -48,7 +56,7 @@ const OrderDetail = (props)=>{
 
     return(<div>
         <div>
-        <div><h3>Mesero:</h3><p>{localStorage.getItem("waiter")}</p></div>
+        <div><h3>Mesero:</h3><p>{userData.displayName}</p></div>
         <div><h3>Mesa:</h3> <p>{props.tableSelected}</p></div>
         </div>
         <div><h3>Cliente:</h3>
@@ -57,6 +65,7 @@ const OrderDetail = (props)=>{
         {detailItem}
         <p>Total: $ {totalAux} USD</p>
         <button onClick={()=>{
+            console.log('orden que se va a crear',props.detailOrder)
             createOrder(props.detailOrder).then(() =>history.push('/selecttable'));
             }} >Enviar a Cocina</button>
         <button onClick={()=>{

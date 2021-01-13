@@ -1,10 +1,16 @@
 import Table from "./Table";
+import { useHistory } from "react-router";
+import { getDataUser } from "../Utils.js";
 //-----------------------------
 
 
 
 const SelectTable = () =>{
-    let user = JSON.parse(localStorage.getItem("user"));
+    let history = useHistory();
+    let user =  getDataUser();
+    console.log('usuario que retorna', user)
+    if (!user)
+        history.push('/login');
     return (<div className="containerDivTables">
         <div className="containerTables">
         <p> {user.displayName}, por favor selecciona una mesa para continuar</p>

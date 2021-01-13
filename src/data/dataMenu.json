@@ -17,7 +17,8 @@
         {
             "id": 4,
             "name": "Jugos",
-            "type":[{
+            "price":0,
+            "custom":[{
                 "id":41,
                 "name":"Naranja",
                 "price":7
@@ -126,6 +127,7 @@
             "id": 8,
             "name":"Agua",
             "img": "https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2F3.png?alt=media&token=f06bc155-20c1-47b1-b065-4f7ce108f779",
+            "price": 0,
             "custom": {
             "type": [{
                 "id": 81,
@@ -142,6 +144,7 @@
                 "id": 9,
                 "name":"Gaseosa",
                 "img":"https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2F8.png?alt=media&token=74732875-d8b2-4de8-9de6-9d2bc3150d15",
+                "price": 0,
                 "custom": {
                 "type": [{
                     "id": 91,

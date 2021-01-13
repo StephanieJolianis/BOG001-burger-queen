@@ -41,14 +41,16 @@ const Modal = (props) => {
         objectOrder.name = objectProps.name;
         objectOrder.price = objectProps.price;
         objectOrder.idProduct = objectProps.idProduct;
-    if(props.detailProduct[0].custom.protein)
-        objectProps.protein = props.detailProduct[0].custom.protein;
+        if(props.detailProduct[0].custom){
+            if(props.detailProduct[0].custom.protein)
+            objectProps.protein = props.detailProduct[0].custom.protein;
 
-        if(props.detailProduct[0].custom.adicional)
-        objectProps.adicional = props.detailProduct[0].custom.adicional;
+            if(props.detailProduct[0].custom.adicional)
+                objectProps.adicional = props.detailProduct[0].custom.adicional;
 
-        if(props.detailProduct[0].custom.type)
-        objectProps.type = props.detailProduct[0].custom.type;
+            if(props.detailProduct[0].custom.type)
+                objectProps.type = props.detailProduct[0].custom.type;
+        }
     }
 
 

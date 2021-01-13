@@ -6,7 +6,7 @@ import { useState } from "react";
 // ----- Componentes --------
 import Table from "./components/Table";
 import TakingOrder from "./components/TakingOrder";
-import Status from "./components/OrderStatus";
+import StatusOrder from "./components/OrderStatus";
 import Stock from "./components/Stock";
 import Bill from "./components/Bill";
 import SelectTable from "./components/SelectTable";
@@ -26,7 +26,7 @@ const App = () => {
                   <Layout>
                     <Route exact path="/table" component={Table} />
                     <Route exact path="/order/:id" component={TakingOrder} />
-                    <Route exact path="/status" component={Status} />
+                    <Route exact path="/status" component={StatusOrder} />
                     <Route exact path="/bill" component={Bill} />
                     <Route exact path="/selecttable" component={SelectTable} />
                     <Route exact path="/stock" component={Stock} />

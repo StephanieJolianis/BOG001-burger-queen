@@ -1,9 +1,12 @@
 import { getOrders } from "../functions-firebase.js";
 import React, { useState, useEffect } from 'react';
 import OrderResume from './OrderResume.js';
+import SlideFoot from './SlideFoot.js';
+
 const OrderStatus = () => {
     const [orderList, setOrderList] = useState([]);
     const [detailOrder, setDetailOrder] = useState({});
+    const [showStatus, setShowStatus] = useState('COCINA');
 
     useEffect(() => {
         obtenerDatos();
@@ -24,17 +27,6 @@ const OrderStatus = () => {
                 console.log(doc.id, " => ", doc.data());
                 arrayAux.push(doc.data());
             });
-
-            // arrayAux2 = data.docs.map(doc => 
-            //     ({id: doc.id,
-            //     client: doc.data().client,
-            //     date: doc.data().date,
-            //     itemsOrder: doc.data().itemsOrder,
-            //     status: doc.data().status,
-            //     table: doc.data().table,
-            //     waiter: doc.data().waiter})
-            //     );
-
             let arrayAux2 = data.docs.map(doc => 
                 ({id: doc.id, ...doc.data()})
                 );
@@ -43,8 +35,10 @@ const OrderStatus = () => {
             console.log(orderList);
         }
 
+    
+    
     let listOrders = orderList.map((ord, idx) => {
-        if (ord.status == 'COCINA')
+        if (ord.status == showStatus)
         return(
             <li key={"order-"+idx}> { ord.id} Estado:{ord.status} 
             <button onClick={()=>setDetailOrder(ord)}>Detalle</button>
@@ -57,15 +51,10 @@ const OrderStatus = () => {
                 <ul>
                 {listOrders}
                 </ul>
-                <OrderResume order={detailOrder} showStatus="COCINA" nextStatus="PROCESO"></OrderResume>
+                <OrderResume order={detailOrder} showStatus={showStatus} nextStatus="PROCESO"></OrderResume>
                 <button onClick={()=>window.location.href = "/selecttable" }>Regresar a Selección de mesa</button>
+                <SlideFoot type="WAITER" setStatusFilter={setShowStatus}></SlideFoot>
             </div>);
+
 }
 export default OrderStatus;
-
-// client: "fgffgfd"
-// date: 1608495355355
-// itemsOrder: [{…}]
-// status: "COCINA"
-// table: "8"
-// waiter: "Stephanie"
