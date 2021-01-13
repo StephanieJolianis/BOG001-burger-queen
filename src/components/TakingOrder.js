@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from 'react';
+import React, { useState, useReducer, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 //----------Componentes------------------------------
 import Breakfast from "./Breakfast";
@@ -20,6 +20,8 @@ const TakingOrder = () => {
     //const [ order, setOrder ] = useState([]);
     // Estado para los estilos dinámicos de los botones del modal
     const [styleBtn, setStyleBtn] = useState([]);
+    //Manejo color botones menú
+    const [colorButton, setColorButton] = useState(true);
     //--------------------------------------------------------------------------->
     const updateOrder = (state, action) =>{
         const ordenLocal = {
@@ -102,10 +104,11 @@ const TakingOrder = () => {
 
     const [order, setOrder] = useReducer(updateOrder, orderInitial);
 
+    
     return (<div className="containerTaking">
         <div className="menuInTaking">
-        <button onClick= {()=>{setShow(true)}}>Desayuno</button>
-        <button onClick= {()=>{setShow(false)}}>Almuerzo y Cena</button>
+        <button className={colorButton ? "clicked" : "noclicked"} onClick= {()=>{setColorButton(true); setShow(true)}}>Desayuno</button>
+        <button className={colorButton ? "noclicked" : "clicked"} onClick= {()=>{setColorButton(false); setShow(false)}}>Almuerzo y Cena</button>
         <Modal show={open} close={setOpen} detailProduct={detailProduct} setDetailProduct={setDetailProduct} detailOrder={order} modifyOrder={setOrder} stylesBtn={ styleBtn } setStylesBtn={ setStyleBtn }/>
         {show ? (<Breakfast statusProduct = {setDetailProduct} showModal={setOpen} />) : (<Lunch statusProduct = {setDetailProduct} showModal={setOpen}/>) }
         </div>

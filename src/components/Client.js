@@ -10,7 +10,7 @@ const Client = (props) => {
 
     return (
         <form onSubmit={(e)=> handleSubmit(e)}>
-        <input type="text" name="client" onChange={(e)=> setNameClient(e.target.value)}/>
+        <input className="inputClient" type="text" name="client" onChange={(e)=> setNameClient(e.target.value)}/>
         <input type="submit"/>
         </form>
     )

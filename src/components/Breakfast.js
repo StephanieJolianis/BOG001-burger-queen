@@ -10,8 +10,8 @@ const Breakfast = (props) =>{
     const DataBreakFast = dataMenu.breakfast.map((item)=>{
         return(
             <button onClick={()=> itemProductBreakfast(item.id)} key={item.id}>
-                <img className="imgBtnLunch" src={item.img} />
-                { item.name }
+                <div className="divImgLunch"><img className="imgBtnLunch" src={item.img} /></div>
+                <p className="nameLunch">{ item.name }</p>
             </button>
         )
     })

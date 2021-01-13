@@ -46,13 +46,13 @@ const OrderStatus = () => {
             )});
 
 
-    return (<div>
-                <p>Vista Estados de pedidos</p>
-                <ul>
+    return (<div className="divOrderStatus">
+        <div className="contentOrderStatus">
+            <ul className="ulOrderStatus">
                 {listOrders}
-                </ul>
-                <OrderResume order={detailOrder} showStatus={showStatus} nextStatus="PROCESO"></OrderResume>
-                <button onClick={()=>window.location.href = "/selecttable" }>Regresar a Selección de mesa</button>
+            </ul>
+                <OrderResume order={detailOrder} showStatus={showStatus}></OrderResume>
+                    </div>
                 <SlideFoot type="WAITER" setStatusFilter={setShowStatus}></SlideFoot>
             </div>);
 

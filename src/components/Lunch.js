@@ -11,8 +11,8 @@ const Lunch = (props) =>{
         const DataLunch = dataMenu.lunch.map((item)=>{
             return(
                 <button onClick={()=> itemProductLunch(item.id)} key={item.id}>
-                    <img className="imgBtnLunch" src={item.img} />
-                    { item.name }
+                    <div className="divImgLunch"><img className="imgBtnLunch" src={item.img} /></div>
+                    <p className="nameLunch">{ item.name }</p>
                 </button>
             )
         })
@@ -26,8 +26,8 @@ const Lunch = (props) =>{
         const DataDrinks = dataMenu.drinks.map((item)=>{
             return(
                 <button onClick={()=> itemProductDrinks(item.id)} key={item.id}>
-                    <img className="imgBtnLunch" src={item.img} />
-                    { item.name }
+                    <div className="divImgLunch"><img className="imgBtnLunch" src={item.img} /></div>
+                    <p className="nameLunch">{ item.name }</p>
                 </button>
             )
         })
@@ -35,8 +35,8 @@ const Lunch = (props) =>{
 
     return (
 <div className="divLunch">
-{DataLunch}
-{DataDrinks}
+    {DataLunch}
+    {DataDrinks}
 </div>
     )
 }

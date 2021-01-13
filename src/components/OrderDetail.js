@@ -26,16 +26,7 @@ const OrderDetail = (props)=>{
         }
         totalAux = totalAux + (totalItem * item.quantity);
         return (
-        <table key={"item-" + index}>
-                <thead>
-                    <tr>
-                    <th>Item</th>
-                    <th>Cant.</th>
-                    <th>Precio c/u</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <tr>
+            <tr key={"item-" + index}>
                 <td>{item.name}
                 <div className="divDetalleItem"><p>Detalle:</p>
                 {item.custom.map((itemCustom,idxItem)=>{
@@ -49,20 +40,32 @@ const OrderDetail = (props)=>{
                 <button onClick={()=>props.modifyOrder({key:"delete", value:item.id})}>Delete</button>
                 </td>
                 <td>${totalItem}</td>
-            </tr>
-                </tbody>
-        </table>)
+            </tr>)
     })
 
     return(<div>
-        <div>
-        <div><h3>Mesero:</h3><p>{userData.displayName}</p></div>
-        <div><h3>Mesa:</h3> <p>{props.tableSelected}</p></div>
+        <div className="divHeadOrder">
+        <div className="divHead1"><p className="pdivHead1">Mesero:</p><p className="pdivHead2">{userData.displayName}</p></div>
+        <div className="divHead2"><p className="pdivHead1">Mesa:</p> <p className="pdivHead2">{props.tableSelected}</p></div>
         </div>
-        <div><h3>Cliente:</h3>
-        <Client modifyName={props.modifyOrder}/>
+        <div className="divClientOrder">
+            <div className="divClient1"><p className="pdivHead1">Cliente:</p></div>
+            <div className="divClient2"><Client modifyName={props.modifyOrder}/></div>
         </div>
-        {detailItem}
+        <table>
+                <thead>
+                    <tr>
+                    <th>Item</th>
+                    <th>Cant.</th>
+                    <th>Precio c/u</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {detailItem}
+                </tbody>
+                
+        </table>
+        
         <p>Total: $ {totalAux} USD</p>
         <button onClick={()=>{
             console.log('orden que se va a crear',props.detailOrder)
