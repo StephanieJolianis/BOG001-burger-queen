@@ -114,9 +114,12 @@
 }
 .divNav ul {
   width: 100%;
+}
+.divNav ul li {
   list-style-type: none;
   width: 100%;
 }
+
 .logoNav {
   width: 100%;
 }
@@ -131,14 +134,18 @@
 }
 
 .divLunch {
-  background: gray;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 96%;
   justify-content: space-evenly;
+  border-width: 2.5px;
+  border-style: solid;
+  border-color: #FFC300;
+  border-radius: 0 0 50px 50px;
+  align-items: center;
 }
 .divLunch button {
-  width: 300px;
+  width: 400px;
   height: 100px;
   left: 53.95px;
   top: 65.72px;
@@ -146,15 +153,30 @@
   border: 0.490456px solid #000000;
   box-sizing: border-box;
   box-shadow: 0px 3.92365px 3.92365px rgba(0, 0, 0, 0.25);
-  border-radius: 9.80913px;
+  border-radius: 20px;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
 .imgBtnLunch {
-  width: 100px;
+  width: 98px;
   border-radius: 20px;
+  border: 0.5px solid #000000;
+}
+
+.divImgLunch {
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+
+.nameLunch {
+  width: 80%;
+  font-family: Montserrat;
+  font-size: large;
+  color: #383838;
 }
 
 .containerTaking {
@@ -164,10 +186,37 @@
 
 .menuInTaking {
   width: 50%;
+  height: 90%;
+  padding: 5%;
 }
 
 .orderInTaking {
   width: 50%;
+}
+
+.clicked {
+  background: #FFC300;
+  width: 50%;
+  height: 50px;
+  border-radius: 8px 8px 0px 0px;
+  border: none;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.noclicked {
+  background: #FFFFFF;
+  width: 50%;
+  height: 50px;
+  border-radius: 8px 8px 0px 0px;
+  border: 0.490456px solid rgba(0, 0, 0, 0.4);
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: larger;
+  color: rgba(56, 56, 56, 0.4);
 }
 
 .buttonTable {
@@ -184,6 +233,44 @@
 .linkNav {
   text-decoration: none;
   color: white;
+}
+
+.liNav {
+  text-align: center;
+  margin-top: 40%;
+}
+
+.liNav1 {
+  text-align: center;
+  margin-top: 40%;
+  margin-bottom: 150%;
+}
+
+.ulNav {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.statusImgNav {
+  height: 50px;
+}
+
+.tablesImgNav {
+  height: 50px;
+}
+
+.logout {
+  text-decoration: none;
+  color: white;
+}
+
+.usernameNav {
+  font-size: larger;
+}
+
+.waiterNav {
+  margin-top: 30%;
 }
 
 .containerTables {
@@ -209,6 +296,165 @@
   display: flex;
 }
 
+.orderInTaking {
+  padding: 5%;
+}
+
+.divHeadOrder {
+  display: flex;
+}
+
+.divHead1 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.divHead2 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.pdivHead1 {
+  color: #383838;
+  font-weight: bold;
+  font-size: large;
+  padding: 2%;
+}
+
+.pdivHead2 {
+  color: #9B9A97;
+  font-weight: bold;
+  font-size: large;
+  padding: 2%;
+}
+
+.divClientOrder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divClient1 {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.divClient2 {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+
+.inputClient {
+  border: none;
+  background: rgba(255, 195, 0, 0.5);
+  height: 100%;
+}
+
+table {
+  width: 100%;
+}
+
+.divOrderStatus {
+  margin: 5%;
+  height: 80%;
+}
+
+.contentOrderStatus {
+  display: flex;
+  border-style: solid;
+  border: 0.5px solid #383838;
+  box-sizing: border-box;
+  border-radius: 55px 55px 0px 0px;
+  height: 100%;
+}
+
+.divDetailOrder {
+  padding: 5%;
+  width: 50%;
+}
+
+.ulOrderStatus {
+  padding: 5%;
+  width: 50%;
+}
+
+.btnCocinaWaiter {
+  background: rgba(127, 187, 51, 0.79);
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 0px 0px 8px 8px;
+  width: 200px;
+  height: 50px;
+  left: 40px;
+  top: 860px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: large;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: large;
+}
+
+.btnProcesoWaiter {
+  background: #ECCD67;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 0px 0px 8px 8px;
+  width: 200px;
+  height: 50px;
+  left: 40px;
+  top: 860px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: large;
+}
+
+.btnServirWaiter {
+  background: #EC8E8E;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 0px 0px 8px 8px;
+  width: 200px;
+  height: 50px;
+  left: 40px;
+  top: 860px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: large;
+}
+
+.btnEntregadaWaiter {
+  background: #95C4E5;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 0px 0px 8px 8px;
+  width: 200px;
+  height: 50px;
+  left: 40px;
+  top: 860px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: large;
+}
+
+.btnCajaWaiter {
+  background: #CFCFCF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 0px 0px 8px 8px;
+  width: 200px;
+  height: 50px;
+  left: 40px;
+  top: 860px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: large;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
@@ -216,7 +462,6 @@ body {
 }
 
 #root {
-  border: 1px solid yellow;
   width: 100vw;
   height: 100vh;
 }

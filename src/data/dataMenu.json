@@ -2,41 +2,49 @@
     "breakfast": [{
             "id": 1,
             "name": "Café americano",
+            "img": "https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2F9.png?alt=media&token=fa170f45-0ef9-447a-8f9c-447fee968b3a",
             "price": 5
         },
         {
             "id": 2,
             "name": "Café con leche",
+            "img": "https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2F2.png?alt=media&token=940edc9e-4b25-4955-bae6-9a2ffd1ea24b",
             "price": 7
         },
         {
             "id": 3,
             "name": "Sandwich de jamón y queso",
+            "img": "https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2F10.png?alt=media&token=2af8d40e-912b-442f-b848-18b14ace559a",
             "price": 10
         },
         {
             "id": 4,
             "name": "Jugos",
-            "type":[{
-                "id":41,
-                "name":"Naranja",
-                "price":7
-            },
-            {
-                "id":42,
-                "name":"Mandarina",
-                "price":7
-            },
-            {
-                "id":43,
-                "name":"Fresa",
-                "price":7
-            },
-            {
-                "id":44,
-                "name":"Mango",
-                "price":7
-            }]
+            "img": "https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2F6.png?alt=media&token=a4e81039-757c-48d4-ac0f-b24c65a81e73",
+            "price":0,
+            "custom":{
+                "type": [
+                    {
+                        "id":41,
+                        "name":"Naranja",
+                        "price":7
+                    },
+                    {
+                        "id":42,
+                        "name":"Mandarina",
+                        "price":7
+                    },
+                    {
+                        "id":43,
+                        "name":"Fresa",
+                        "price":7
+                    },
+                    {
+                        "id":44,
+                        "name":"Mango",
+                        "price":7
+                    }]
+            }
         }
     ],
     "lunch": [{
@@ -75,6 +83,7 @@
         {
             "id":6,
             "name": "Hamburguesa Doble",
+            "img": "https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2Fhamburguesadoble.png?alt=media&token=657f6f64-ccf1-4738-9931-3d675653deb0",
             "price": 15,
             "custom": {
                 "protein": [{
@@ -126,6 +135,7 @@
             "id": 8,
             "name":"Agua",
             "img": "https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2F3.png?alt=media&token=f06bc155-20c1-47b1-b065-4f7ce108f779",
+            "price": 0,
             "custom": {
             "type": [{
                 "id": 81,
@@ -142,6 +152,7 @@
                 "id": 9,
                 "name":"Gaseosa",
                 "img":"https://firebasestorage.googleapis.com/v0/b/burguer-queen-f77ac.appspot.com/o/img%2F8.png?alt=media&token=74732875-d8b2-4de8-9de6-9d2bc3150d15",
+                "price": 0,
                 "custom": {
                 "type": [{
                     "id": 91,

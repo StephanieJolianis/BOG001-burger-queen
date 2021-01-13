@@ -1,33 +1,52 @@
 import { React} from 'react';
 import loginNamelogo from '../img/logoBQLogin.png';
+import { logInByPassword, getUser } from "../functions-firebase.js";
 import { useHistory } from "react-router-dom";
 //-------------------------------------------------
 
 const Login = () => {
-
+    let history = useHistory();
     const handleInputChange = (e) => {
         localStorage.setItem("waiter", e.target.value);
     }
 
-    let history = useHistory();
-        return (
-            <div className = "login-container">
-                <div>   
-                    <div className="login-container-logoForm">  
-                        <div className = "login-img-logo">
-                            <img src ={loginNamelogo} alt=""/>
-                        </div> 
-                        <form className="form-group">
-                            <label>Usuario</label>
-                            <input name="user" type="name" placeholder="Nombre" onChange={handleInputChange} required />
-                            <label>Password</label>
-                            <input name="password" placeholder="password" type="password" />
-                            <button onClick={()=>history.push("/selecttable")}>INGRESAR</button>
-                        </form>
-                    </div>
-                </div>   
-            </div>
-        )
+    const handleSubmitForm = (e) => {
+        e.preventDefault();
+        console.log("usuario", e.target.elements[0].value);
+        console.log("password", e.target.elements[1].value);
+        logInByPassword({
+            email: e.target.elements[0].value,
+            password: e.target.elements[1].value
+            }).then((user)=>{
+                getUser(user.user.uid).then((doc)=>{
+                    console.log("user rupaul", doc.data())
+                    localStorage.setItem("user", JSON.stringify(doc.data()));
+                })
+                //let cosa = JSON.parse(localStorage.getItem("user"));
+                history.push('/selecttable');
+            }).catch((error)=>{
+                console.log("no valido",error);
+                history.push('/login');
+            })
+    }
+
+    return (
+        <div className = "login-container">
+            <div>   
+                <div className="login-container-logoForm">  
+                    <div className = "login-img-logo">
+                        <img src ={loginNamelogo} alt=""/>
+                    </div> 
+                    <form className="form-group" onSubmit={handleSubmitForm}>
+                        <label>Usuario</label>
+                        <input name="user" type="name" placeholder="Nombre" onChange={handleInputChange} required />
+                        <label>Password</label>
+                        <input name="password" placeholder="password" type="password" />
+                        <button type="submit">INGRESAR</button>
+                    </form>
+                </div>
+            </div>   
+        </div>)
     }
 
 

@@ -1,25 +1,28 @@
 import { Link } from "react-router-dom";
 import logo from "../img/logoLetras.png";
-import waiter from "../img/waiter.png"
+import table from "../img/iconTakeOrder.png";
+import statusOrder from "../img/chef1.png";
+import { useHistory } from "react-router";
+import { getDataUser } from "../Utils.js";
 //----------------------------------------------
 
 const Nav = () => {
-
+    let history = useHistory();
+    let user = getDataUser();
+    if (!user)
+        history.push('/login');
 return (<div>
     <img className="logoNav" src ={logo} alt=""/>
-        <img className="waiterNav" src ={waiter} alt=""/>
-<p>Nombre mesero</p>
+        <img className="waiterNav" src ={user.photoURL} alt=""/>
+        <p className="usernameNav">{user.displayName}</p>
+        <ul className="ulNav">
+            <li className="liNav"><Link className="linkNav" to= "/selecttable"><img className="tablesImgNav" src ={table}/></Link></li>
+            <li className="liNav1"><Link className="linkNav" to= "/status"><img className= "statusImgNav" src = {statusOrder}/></Link></li>
+            
+        </ul>
 
-<ul>
-    <li><Link className="linkNav" to= "/selecttable">Select Table</Link></li>
-    <li><Link className="linkNav" to= "/status">Status Order</Link></li>
-    <li><Link className="linkNav" to= "/stock">Stock</Link></li>
-    <li><Link className="linkNav" to= "/bill">Bill</Link></li>
-    
-</ul>
-
-<Link to="/login">
-            <span>Cerrar Sesión</span>
+<Link to="/login" className="logout">
+            Cerrar Sesión
         </Link>
     </div>
     )}
