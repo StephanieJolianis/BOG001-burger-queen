@@ -1,0 +1,640 @@
+.login-container {
+  background-image: url("../img/burgerLogin.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100vw;
+  height: 100vh;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.login-container-logoForm {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 40vw;
+  height: 80vh;
+  padding: 5px;
+  margin: 10px;
+  align-items: center;
+  margin-right: 30px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.login-img-logo {
+  width: 100%;
+  height: 30%;
+  text-align: center;
+  margin: 10px 5px;
+}
+.login-img-logo img {
+  width: 90%;
+}
+
+.form-group {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #383838;
+  opacity: 0.8;
+  font-weight: bold;
+  color: white;
+  font-size: 1.25em;
+  border-radius: 1px;
+  margin: 20px 5px;
+  padding: 5px;
+  width: 90%;
+}
+.form-group label {
+  margin: 5px 5px;
+}
+.form-group input {
+  filter: blur(0.5px);
+  margin: 10px 5px;
+  padding: 5px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  color: #383838;
+  height: 40px;
+  font-size: 1.25em;
+}
+.form-group button {
+  background-color: #E8BA24;
+  font-family: "Montserrat", normal;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 6px;
+  height: 50px;
+  margin: 20px 5px;
+  font-size: 1.25em;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup {
+  background: white;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.divLayout {
+  display: flex;
+  height: 100%;
+}
+
+.divNav {
+  width: 10%;
+  background: #191517;
+}
+.divNav div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.divNav ul {
+  width: 100%;
+}
+.divNav ul li {
+  list-style-type: none;
+  width: 100%;
+}
+
+.logoNav {
+  width: 100%;
+}
+
+.waiterNav {
+  border-radius: 50%;
+  width: 60%;
+}
+
+.divChildren {
+  width: 90%;
+}
+
+.divLunch {
+  display: flex;
+  flex-direction: column;
+  height: 96%;
+  justify-content: space-evenly;
+  border-width: 2.5px;
+  border-style: solid;
+  border-color: #FFC300;
+  border-radius: 0 0 50px 50px;
+  align-items: center;
+}
+.divLunch button {
+  width: 400px;
+  height: 100px;
+  left: 53.95px;
+  top: 65.72px;
+  background: #FFFFFF;
+  border: 0.490456px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 3.92365px 3.92365px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.imgBtnLunch {
+  width: 98px;
+  border-radius: 20px;
+  border: 0.5px solid #000000;
+}
+
+.divImgLunch {
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+
+.nameLunch {
+  width: 80%;
+  font-family: Montserrat;
+  font-size: large;
+  color: #383838;
+}
+
+.containerTaking {
+  display: flex;
+  height: 100%;
+}
+
+.menuInTaking {
+  width: 50%;
+  height: 90%;
+  padding: 5%;
+}
+
+.orderInTaking {
+  width: 50%;
+}
+
+.clicked {
+  background: #FFC300;
+  width: 50%;
+  height: 50px;
+  border-radius: 8px 8px 0px 0px;
+  border: none;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.noclicked {
+  background: #FFFFFF;
+  width: 50%;
+  height: 50px;
+  border-radius: 8px 8px 0px 0px;
+  border: 0.490456px solid rgba(0, 0, 0, 0.4);
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: larger;
+  color: rgba(56, 56, 56, 0.4);
+}
+
+.buttonTable {
+  width: 300px;
+  height: 100px;
+  background: #FFFFFF;
+  border: 0.490456px solid #000000;
+  box-shadow: 0px 3.92365px 3.92365px rgba(0, 0, 0, 0.25);
+  border-radius: 9.80913px;
+  font-family: "Montserrat", sans-serif;
+  font-size: larger;
+}
+
+.linkNav {
+  text-decoration: none;
+  color: white;
+}
+
+.liNav {
+  text-align: center;
+  margin-top: 40%;
+}
+
+.liNav1 {
+  text-align: center;
+  margin-top: 40%;
+  margin-bottom: 150%;
+}
+
+.ulNav {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.statusImgNav {
+  height: 50px;
+}
+
+.tablesImgNav {
+  height: 50px;
+}
+
+.logout {
+  text-decoration: none;
+  color: white;
+}
+
+.usernameNav {
+  font-size: larger;
+  color: white;
+  text-align: center;
+}
+
+.waiterNav {
+  margin-top: 30%;
+}
+
+.logoutNav {
+  height: 35px;
+}
+
+.cerrarSesion {
+  color: #FFC300;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.containerTables {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+}
+
+.containerDivTables {
+  height: 100%;
+  display: flex;
+  margin: 1em;
+}
+.containerDivTables p {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: larger;
+  font-weight: 600;
+}
+
+.divDetalleItem {
+  display: flex;
+  justify-content: center;
+}
+
+.orderInTaking {
+  padding: 5%;
+}
+
+.divHeadOrder {
+  display: flex;
+}
+
+.divHead1 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.divHead2 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.pdivHead1 {
+  color: #383838;
+  font-weight: bold;
+  font-size: large;
+  padding: 2%;
+}
+
+.pdivHead2 {
+  color: #9B9A97;
+  font-weight: bold;
+  font-size: large;
+  padding: 2%;
+}
+
+.divClientOrder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divClient1 {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.divClient2 {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+
+.inputClient {
+  border: none;
+  background: rgba(255, 195, 0, 0.5);
+  height: 100%;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+}
+
+.divOrderDetailBig {
+  height: 99%;
+  border-style: solid;
+  margin-top: 50px;
+  border-radius: 0 0 50px 50px;
+  border-width: 0.5px;
+  border-color: dimgrey;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #fff8e2;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #FFFFFF;
+}
+
+thead tr th {
+  Font-Family: "Monserrat", Sans-Serif;
+  font-size: medium;
+  width: 30%;
+}
+
+.itemNameTable {
+  font-weight: 600;
+  font-size: large;
+}
+
+.detalleItemTable {
+  font-weight: lighter;
+}
+
+.divDetalleItem {
+  margin-left: 8px;
+}
+
+.itemNameTableDetail {
+  color: crimson;
+  font-weight: 600;
+}
+
+.divTotal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pDivTotal {
+  font-size: large;
+  font-weight: 600;
+}
+
+.btnEnviarCocina {
+  width: 200px;
+  height: 50px;
+  margin: 10px;
+  background: #ABD279;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  font-family: Montserrat;
+  font-size: large;
+}
+
+.btnCancelarOrden {
+  width: 200px;
+  height: 50px;
+  background: #FFFFFF;
+  border: 0.5px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin: 10px;
+  font-family: Montserrat;
+  font-size: large;
+}
+
+.btnFinalOrder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.btnSumaTble {
+  background: white;
+  border-radius: 5px;
+  font-size: medium;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  margin: 8px;
+  border: 0.5px solid #000000;
+}
+
+.btnDeleteTble {
+  background: white;
+  border-radius: 5px;
+  font-size: medium;
+  height: 30px;
+  margin: 8px;
+  border: 0.5px solid #000000;
+}
+
+.divOrderStatus {
+  margin: 5%;
+  height: 80%;
+}
+
+.contentOrderStatus {
+  display: flex;
+  border-style: solid;
+  border: 0.5px solid #383838;
+  box-sizing: border-box;
+  border-radius: 55px 55px 0px 0px;
+  height: 100%;
+}
+
+.divDetailOrder {
+  padding: 5%;
+  width: 50%;
+}
+
+.ulOrderStatus {
+  padding: 5%;
+  width: 50%;
+}
+
+.liDetalleOrder {
+  padding: 0px;
+  height: 50px;
+  width: 90%;
+  border: 0.5px solid #000000;
+  background: #E9E9E9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0px 16px 0px;
+}
+
+.btnLidetalleOrden {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: medium;
+  width: 40%;
+}
+
+.btnCocinaWaiter {
+  background: rgba(127, 187, 51, 0.79);
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 0px 0px 8px 8px;
+  width: 200px;
+  height: 50px;
+  left: 40px;
+  top: 860px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: large;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: large;
+}
+
+.btnProcesoWaiter {
+  background: #ECCD67;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 0px 0px 8px 8px;
+  width: 200px;
+  height: 50px;
+  left: 40px;
+  top: 860px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: large;
+}
+
+.btnServirWaiter {
+  background: #EC8E8E;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 0px 0px 8px 8px;
+  width: 200px;
+  height: 50px;
+  left: 40px;
+  top: 860px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: large;
+}
+
+.btnEntregadaWaiter {
+  background: #95C4E5;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 0px 0px 8px 8px;
+  width: 200px;
+  height: 50px;
+  left: 40px;
+  top: 860px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: large;
+}
+
+.btnCajaWaiter {
+  background: #CFCFCF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 0px 0px 8px 8px;
+  width: 200px;
+  height: 50px;
+  left: 40px;
+  top: 860px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: large;
+}
+
+.btnSinEstilo {
+  background: #383838;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 0px 0px 8px 8px;
+  width: 200px;
+  height: 50px;
+  left: 40px;
+  top: 860px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: large;
+  color: white;
+}
+
+.pSeleccionOrden {
+  text-align: center;
+  margin-top: 130px;
+  font-size: larger;
+  color: red;
+  font-weight: bold;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  font-size: 16px;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+}
+
+footer {
+  background-color: #E8BA24;
+  padding: 5px;
+  text-align: center;
+  height: 40px;
+  align-items: center;
+}
+
+/*# sourceMappingURL=main.css.map */
