@@ -4,6 +4,7 @@ import table from "../img/iconTakeOrder.png";
 import statusOrder from "../img/chef1.png";
 import { useHistory } from "react-router";
 import { getDataUser } from "../Utils.js";
+import logout from "../img/logout.png"
 //----------------------------------------------
 
 const Nav = () => {
@@ -22,7 +23,8 @@ return (<div>
         </ul>
 
 <Link to="/login" className="logout">
-            Cerrar Sesión
+    <div><img className="logoutNav" src={logout} />
+            <p className="cerrarSesion">Cerrar Sesión</p></div>
         </Link>
     </div>
     )}

@@ -1,11 +1,13 @@
 import { Switch, useHistory } from "react-router";
 import React, { useState, useEffect } from 'react';
 import { udpOrderStatus } from "../functions-firebase.js";
+import { getDataUser } from "../Utils.js";
 
 const OrderResume = (props) => {
     let history = useHistory();
     let totalAux = 0;
     let nextStatus = 'PROCESO';
+    let user =  getDataUser();
     switch (props.showStatus) {
         case 'COCINA':
             nextStatus = 'PROCESO';
@@ -25,7 +27,7 @@ const OrderResume = (props) => {
         default:
             break;
     }  
-    let detailItem = (<div><p>Selecciona una orden</p></div>);
+    let detailItem = (<div><p className="pSeleccionOrden">Selecciona una orden</p></div>);
     if(props.order.itemsOrder){
         detailItem =  props.order.itemsOrder.map((item,index)=>{
             let itemPrice = 0;
@@ -43,9 +45,11 @@ const OrderResume = (props) => {
             totalAux = totalAux + (totalItem * item.quantity);
             return (<div>
                 <div>
-        <div><h3>Mesero:</h3><p>{props.order.waiter}</p></div>
-        <div><h3>Mesa:</h3> <p>{props.order.table}</p></div>
-        <div><h3>Cliente:{props.order.client}</h3></div>
+                    <div className="divHeadOrder">
+                    <div className="divHead1"><p className="pdivHead1">Mesero:</p><p className="pdivHead2">{user.displayName}</p></div>
+                    <div className="divHead2"><p className="pdivHead1">Mesa:</p> <p className="pdivHead2">{props.order.table}</p></div>
+                    </div>
+        <div className="divHeadOrder"><p className="pdivHead1">Cliente:</p><p className="pdivHead2">{props.order.client}</p></div>
     </div>
                 <table key={"item-" + index}>
                     <thead>

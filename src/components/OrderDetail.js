@@ -2,6 +2,7 @@ import Client from "./Client";
 import { useHistory } from "react-router";
 import { createOrder } from "../functions-firebase.js";
 import { getDataUser } from "../Utils.js";
+import logoSuma from "../img/plus.png"
 
 const OrderDetail = (props)=>{
     let history = useHistory();
@@ -27,23 +28,24 @@ const OrderDetail = (props)=>{
         totalAux = totalAux + (totalItem * item.quantity);
         return (
             <tr key={"item-" + index}>
-                <td>{item.name}
-                <div className="divDetalleItem"><p>Detalle:</p>
+                <td><p className="itemNameTable">{item.name}</p>
+                <div className="divDetalleItem"><p className="detalleItemTable">Detalle:</p>
                 {item.custom.map((itemCustom,idxItem)=>{
                 return(
-                <div key={"custom-"+idxItem}>
-                <p> { itemCustom.name } </p></div>)})}</div>
+                <div className="divDetalleItem" key={"custom-"+idxItem}>
+                <p className="itemNameTableDetail"> { itemCustom.name } </p></div>)})}</div>
                 </td>
-                <td><button onClick={()=>props.modifyOrder({key:"subtract", value:item.id})}>-</button>
+                <td><button className="btnSumaTble" onClick={()=>props.modifyOrder({key:"subtract", value:item.id})}>-</button>  
                 {item.quantity} 
-                <button onClick={()=>props.modifyOrder({key:"add", value:item.id})}>+</button>
-                <button onClick={()=>props.modifyOrder({key:"delete", value:item.id})}>Delete</button>
+                <button className="btnSumaTble" onClick={()=>props.modifyOrder({key:"add", value:item.id})}>+</button>
+                <button className="btnDeleteTble" onClick={()=>props.modifyOrder({key:"delete", value:item.id})}>Delete</button>
                 </td>
-                <td>${totalItem}</td>
+                <td>${totalItem}
+                </td>
             </tr>)
     })
 
-    return(<div>
+    return(<div className="divOrderDetailBig">
         <div className="divHeadOrder">
         <div className="divHead1"><p className="pdivHead1">Mesero:</p><p className="pdivHead2">{userData.displayName}</p></div>
         <div className="divHead2"><p className="pdivHead1">Mesa:</p> <p className="pdivHead2">{props.tableSelected}</p></div>
@@ -65,16 +67,17 @@ const OrderDetail = (props)=>{
                 </tbody>
                 
         </table>
-        
-        <p>Total: $ {totalAux} USD</p>
-        <button onClick={()=>{
+        <div className="divTotal"><p className="pDivTotal">Total:  ${totalAux} USD</p></div>
+        <div className="btnFinalOrder">
+        <button className="btnEnviarCocina" onClick={()=>{
             console.log('orden que se va a crear',props.detailOrder)
             createOrder(props.detailOrder).then(() =>history.push('/selecttable'));
             }} >Enviar a Cocina</button>
-        <button onClick={()=>{
+        <button className="btnCancelarOrden" onClick={()=>{
             props.modifyOrder({key:"cancel", value:""});
             history.push('/selecttable');
             }}>Cancelar</button>
+        </div>
     </div>);
 
 

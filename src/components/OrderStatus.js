@@ -35,13 +35,23 @@ const OrderStatus = () => {
             console.log(orderList);
         }
 
+    // const [colorDetalleBtn, setColorDetalleBtn] = useState("COCINA")
+
+    // switch (colorDetalleBtn) {
+    //     case "COCINA":
+            
+    //         break;
     
+    //     default:
+    //         break;
+    // }
+
     
     let listOrders = orderList.map((ord, idx) => {
         if (ord.status == showStatus)
         return(
-            <li key={"order-"+idx}> { ord.id} Estado:{ord.status} 
-            <button onClick={()=>setDetailOrder(ord)}>Detalle</button>
+            <li className="liDetalleOrder" key={"order-"+idx}> { ord.id} Estado:{ord.status} 
+            <button className="btnLidetalleOrden" onClick={()=>setDetailOrder(ord)}>Detalle</button>
             </li>
             )});
 

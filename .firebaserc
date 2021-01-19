@@ -1,5 +1,6 @@
 {
   "projects": {
-    "bq13": "burguer-queen-f77ac"
+    "bq13": "burguer-queen-f77ac",
+    "default": "burguer-queen-f77ac"
   }
 }
