@@ -1,4 +1,4 @@
-import React, { useState, useReducer, useEffect } from 'react';
+import React, { useState, useReducer } from 'react';
 import { useParams } from "react-router-dom";
 //----------Componentes------------------------------
 import Breakfast from "./Breakfast";

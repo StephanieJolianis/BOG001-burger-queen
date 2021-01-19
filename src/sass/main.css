@@ -109,9 +109,6 @@
   flex-direction: column;
   align-items: center;
 }
-.divNav p {
-  color: white;
-}
 .divNav ul {
   width: 100%;
 }
@@ -267,10 +264,22 @@
 
 .usernameNav {
   font-size: larger;
+  color: white;
+  text-align: center;
 }
 
 .waiterNav {
   margin-top: 30%;
+}
+
+.logoutNav {
+  height: 35px;
+}
+
+.cerrarSesion {
+  color: #FFC300;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
 }
 
 .containerTables {
@@ -290,10 +299,13 @@
   text-align: center;
   margin: 0;
   font-family: "Montserrat", sans-serif;
+  font-size: larger;
+  font-weight: 600;
 }
 
 .divDetalleItem {
   display: flex;
+  justify-content: center;
 }
 
 .orderInTaking {
@@ -356,6 +368,109 @@
 
 table {
   width: 100%;
+  text-align: center;
+}
+
+.divOrderDetailBig {
+  height: 99%;
+  border-style: solid;
+  margin-top: 50px;
+  border-radius: 0 0 50px 50px;
+  border-width: 0.5px;
+  border-color: dimgrey;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #fff8e2;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #FFFFFF;
+}
+
+thead tr th {
+  Font-Family: "Monserrat", Sans-Serif;
+  font-size: medium;
+  width: 30%;
+}
+
+.itemNameTable {
+  font-weight: 600;
+  font-size: large;
+}
+
+.detalleItemTable {
+  font-weight: lighter;
+}
+
+.divDetalleItem {
+  margin-left: 8px;
+}
+
+.itemNameTableDetail {
+  color: crimson;
+  font-weight: 600;
+}
+
+.divTotal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pDivTotal {
+  font-size: large;
+  font-weight: 600;
+}
+
+.btnEnviarCocina {
+  width: 200px;
+  height: 50px;
+  margin: 10px;
+  background: #ABD279;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  font-family: Montserrat;
+  font-size: large;
+}
+
+.btnCancelarOrden {
+  width: 200px;
+  height: 50px;
+  background: #FFFFFF;
+  border: 0.5px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin: 10px;
+  font-family: Montserrat;
+  font-size: large;
+}
+
+.btnFinalOrder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.btnSumaTble {
+  background: white;
+  border-radius: 5px;
+  font-size: medium;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  margin: 8px;
+  border: 0.5px solid #000000;
+}
+
+.btnDeleteTble {
+  background: white;
+  border-radius: 5px;
+  font-size: medium;
+  height: 30px;
+  margin: 8px;
+  border: 0.5px solid #000000;
 }
 
 .divOrderStatus {
@@ -380,6 +495,26 @@ table {
 .ulOrderStatus {
   padding: 5%;
   width: 50%;
+}
+
+.liDetalleOrder {
+  padding: 0px;
+  height: 50px;
+  width: 90%;
+  border: 0.5px solid #000000;
+  background: #E9E9E9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0px 16px 0px;
+}
+
+.btnLidetalleOrden {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: medium;
+  width: 40%;
 }
 
 .btnCocinaWaiter {
@@ -453,6 +588,29 @@ table {
   font-family: Montserrat;
   font-weight: bold;
   font-size: large;
+}
+
+.btnSinEstilo {
+  background: #383838;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 0px 0px 8px 8px;
+  width: 200px;
+  height: 50px;
+  left: 40px;
+  top: 860px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: large;
+  color: white;
+}
+
+.pSeleccionOrden {
+  text-align: center;
+  margin-top: 130px;
+  font-size: larger;
+  color: red;
+  font-weight: bold;
 }
 
 body {
