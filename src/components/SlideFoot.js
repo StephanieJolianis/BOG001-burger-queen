@@ -19,9 +19,9 @@ const SlideFoot = (props) => {
     else
     return(
         <div>
-            <button className="btnCocinaChef" onClick={()=>props.setStatusFilter('COCINA') }>En Cocina</button>
-            <button className="btnProcesoChef" onClick={()=>props.setStatusFilter('PROCESO') }>En Progreso</button>
-            <button className="btnServirChef" onClick={()=>props.setStatusFilter('SERVIR') }>Para Servir</button>
+            <button className={ colorBtnSlide==2 ? "btnServirWaiter" : "btnSinEstilo"} onClick={()=>{ setcolorBtnSlide(2) ;props.setStatusFilter('COCINA')} }>En Cocina</button>
+            <button className={ colorBtnSlide==3 ? "btnProcesoWaiter" : "btnSinEstilo"} onClick={()=>{setcolorBtnSlide(3) ;props.setStatusFilter('PROCESO')} }>En Progreso</button>
+            <button className={ colorBtnSlide==4 ? "btnCocinaWaiter" : "btnSinEstilo"} onClick={()=>{setcolorBtnSlide(4) ;props.setStatusFilter('SERVIR')} }>Para Servir</button>
         </div>
     );
 

@@ -12,12 +12,13 @@ const Nav = () => {
     let user = getDataUser();
     if (!user)
         history.push('/login');
+
 return (<div>
     <img className="logoNav" src ={logo} alt=""/>
         <img className="waiterNav" src ={user.photoURL} alt=""/>
         <p className="usernameNav">{user.displayName}</p>
         <ul className="ulNav">
-            <li className="liNav"><Link className="linkNav" to= "/selecttable"><img className="tablesImgNav" src ={table}/></Link></li>
+            {user.type != 'CHEF' && (<li className="liNav"><Link className="linkNav" to= "/selecttable"><img className="tablesImgNav" src ={table}/></Link></li>)}
             <li className="liNav1"><Link className="linkNav" to= "/status"><img className= "statusImgNav" src = {statusOrder}/></Link></li>
             
         </ul>

@@ -70,7 +70,6 @@ const OrderDetail = (props)=>{
         <div className="divTotal"><p className="pDivTotal">Total:  ${totalAux} USD</p></div>
         <div className="btnFinalOrder">
         <button className="btnEnviarCocina" onClick={()=>{
-            console.log('orden que se va a crear',props.detailOrder)
             createOrder(props.detailOrder).then(() =>history.push('/selecttable'));
             }} >Enviar a Cocina</button>
         <button className="btnCancelarOrden" onClick={()=>{

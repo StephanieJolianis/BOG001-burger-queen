@@ -156,16 +156,14 @@ footer img {
 }
 
 .popup {
-  background: white;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-  font-family: 'Roboto', Serif;
-  padding: 20px;
   text-align: center;
-  width: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #383838;
+  padding: 80px;
+  border-radius: 8px;
 }
 
 

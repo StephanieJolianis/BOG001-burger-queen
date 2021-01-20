@@ -98,6 +98,7 @@ const TakingOrder = () => {
         itemsOrder: [],
         client:"",
         table:id,
+        number:0,
         status:"COCINA",
         waiter:localStorage.getItem("waiter")
     }

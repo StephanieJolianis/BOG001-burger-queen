@@ -1,8 +1,12 @@
 import fb from "./init-firebase.js";
 import "firebase/auth";
 //crea la orden en firebase
+
 export const createOrder = async(order) => {
-    await  fb.database.collection("orderCollection").doc().set(order);
+    return fb.createNumberOrder().then((ordId)=>{
+        order.number = ordId; 
+        return fb.database.collection("orderCollection").doc().set(order);
+    });
 }
 
 export const getOrders = async() =>{

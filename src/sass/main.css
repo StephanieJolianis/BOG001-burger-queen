@@ -83,16 +83,95 @@
 }
 
 .popup {
-  background: white;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-  font-family: "Montserrat", sans-serif;
   padding: 20px;
   text-align: center;
-  width: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #383838;
+  border-radius: 8px;
+}
+
+.nameItemModal {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.priceItemModal {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  text-align: center;
+  color: rgba(251, 251, 251, 0.37);
+}
+
+.pSeleccionModal {
+  align-content: center;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+.btnAddModal {
+  width: 150px;
+  height: 50px;
+  background: #FFC300;
+  border: 0.5px solid #000000;
+  border-radius: 5px;
+  margin: 10px;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: normal;
+  color: #383838;
+}
+
+.btnCancelModal {
+  width: 150px;
+  height: 50px;
+  background: #FFFFFF;
+  border: 0.5px solid #000000;
+  border-radius: 5px;
+  margin: 10px;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: normal;
+  color: #383838;
+}
+
+.btnModalUnClicked {
+  width: 130px;
+  height: 50px;
+  background: #383838;
+  border: 0.5px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 20px;
+  color: #FFFFFF;
+  margin: 12px;
+}
+
+.btnModalClicked {
+  width: 130px;
+  height: 50px;
+  background: #FFC300;
+  border: 0.5px solid #000000;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 20px;
+  color: #383838;
+  margin: 12px;
 }
 
 .divLayout {
@@ -270,6 +349,8 @@
 
 .waiterNav {
   margin-top: 30%;
+  border-style: solid;
+  border-color: floralwhite;
 }
 
 .logoutNav {
@@ -427,7 +508,7 @@ thead tr th {
   width: 200px;
   height: 50px;
   margin: 10px;
-  background: #ABD279;
+  background: #FFC300;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   font-family: Montserrat;
@@ -611,6 +692,13 @@ thead tr th {
   font-size: larger;
   color: red;
   font-weight: bold;
+}
+
+.divOrderResume {
+  height: 99%;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: dimgrey;
 }
 
 body {

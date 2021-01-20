@@ -19,6 +19,7 @@ const auth = firebase.auth();
 const database = firebase.firestore();
 const storage = firebase.storage().ref();
 const timeStamp = firebase.firestore.FieldValue.serverTimestamp();
+const increment = firebase.firestore.FieldValue.increment(1);
 
 const arrayUnionFunction = (userId) => {
     return firebase.firestore.FieldValue.arrayUnion(userId);
@@ -28,4 +29,19 @@ const arrayRemoveFunction = (userId) => {
     return firebase.firestore.FieldValue.arrayRemove(userId);
 }
 
-export default { auth, database, storage, timeStamp, arrayUnionFunction, arrayRemoveFunction, firebase }
+const createNumberOrder = async() => {
+    let incrementalRef = database.collection("orderCount").doc("0");
+    return incrementalRef.get().then((doc)=>{
+        let consecutive = 0;
+        if (doc.exists) {
+            consecutive = doc.data().count;
+            console.log('coleccion incremental',consecutive);
+            incrementalRef.update("count", increment);
+          }
+          return consecutive;
+    });
+
+    
+}
+
+export default { auth, database, storage, timeStamp, increment, createNumberOrder, arrayUnionFunction, arrayRemoveFunction, firebase }

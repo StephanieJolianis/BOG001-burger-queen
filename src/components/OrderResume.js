@@ -43,7 +43,7 @@ const OrderResume = (props) => {
                 totalItem = itemPrice;
             }
             totalAux = totalAux + (totalItem * item.quantity);
-            return (<div>
+            return (<div className="divOrderResume">
                 <div>
                     <div className="divHeadOrder">
                     <div className="divHead1"><p className="pdivHead1">Mesero:</p><p className="pdivHead2">{user.displayName}</p></div>
